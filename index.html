@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laravel 11 Admin Panel CURD Builder and API Builder</title>
+    <meta name="robots" content="index, follow">
+    <meta
+        content="Laravel-11 CRUD Builder is a powerful admin panel and API generator with role-based access control, multi-language support, and automatic code generation."
+        name="description">
+    <meta
+        content="Laravel CRUD Builder, Admin Panel Generator, API Builder, Role-Based Access Control, Permission Management, Multi-Language Support, Automatic Code Generation, Swagger Documentation, REST API, Laravel CMS, Laravel 11 Admin Panel"
+        name="keywords">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <h5 style="color: #245BCD;"><strong>CURD Builder</strong></h5>
+                <a class="mr-auto ml-3 ml-lg-0" href="#">
+                    <img src="images/logo.png" alt="" style="width: 80px; height: 70px;">
+                </a>
+                <button class="navbar-toggler order-1" type="button" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+        <aside class="left-menu">
+            <nav>
+                <ul>
+                    <li class="left-menu-title">
+                        <h6>
+                            <a href="#getting-started">Getting started</a>
+                        </h6>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#introduction">
+                            <span>introduction</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#key-fatures">
+                            <span>Key Features</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#file-stricture">
+                            <span>folder structure</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#system-requirements">
+                            <span>system requirements</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-title">
+                        <h6>
+                            <a href="#how-to-install">How to install</a>
+                        </h6>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#live-server">
+                            <span>Installation Steps</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-title">
+                        <h6>
+                            <a href="#credentials">Credentials</a>
+                        </h6>
+                    </li>
+
+                    <li class="left-menu-title">
+                        <h6>
+                            <a href="#admin-panel">Admin Panel</a>
+                        </h6>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#user-management">
+                            <span>User Management</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#role-management">
+                            <span>Role Management</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#permission-group-management">
+                            <span>Permission Group</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#permission-management">
+                            <span>Permission Management</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#role-has-permission">
+                            <span>Role Has Permission</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#language-localization">
+                            <span>Language</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#curd-action">
+                            <span>Generate CURD</span>
+                        </a>
+                    </li>
+
+                    <li class="left-menu-title">
+                        <h6>
+                            <a href="#release-log">Thank you</a>
+                        </h6>
+                    </li>
+
+                    <li class="left-menu-item">
+                        <a href="#release-log">
+                            <span>release log</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <aside class="main-content-area">
+            <div class="main-content container-fluid">
+                <div class="mb-40 pb-40 border-bottom">
+                    <h3 id="getting-started" class="first-title">Laravel-11 CRUD Builder | Admin Panel & API
+                        Generator | Role & Permission Management</h3>
+                </div>
+
+                <section>
+                    <h4 id="introduction" class="second-title">Introduction</h4>
+                    <p>
+                        <strong>Laravel-11 CRUD Builder</strong> is a comprehensive solution for building dynamic
+                        admin panels, APIs, and CMS systems. Designed to streamline development, it automates the
+                        creation of models, migrations, controllers, repositories, and routes with minimal effort.
+                        <br><br>
+                        This builder empowers developers to quickly set up CRUD operations with advanced features like
+                        <strong>role-based access control (RBAC)</strong>, <strong>permission management</strong>, and
+                        <strong>multi-language support</strong>. It seamlessly integrates API generation with dynamic
+                        <strong>Swagger documentation</strong>, making it ideal for developers who require both
+                        front-end and back-end solutions.
+                        <br><br>
+                        Whether you need to manage a simple data structure or complex relationships, Laravel-11 CRUD
+                        Builder simplifies the process with an intuitive interface and customizable settings. Key
+                        features include:
+                    </p>
+                    <p>
+                        Laravel-11 CRUD Builder is the perfect tool for developers, freelancers, and agencies
+                        looking to accelerate project delivery and reduce development time without compromising on
+                        quality and flexibility.
+                    </p>
+                </section>
+
+                <section>
+                    <h4 id="key-features" class="second-title">Key Features</h4>
+                    <ul class="right">
+                        <li>Easy and quick <strong>installation</strong> process</li>
+                        <li>Fully <strong>responsive</strong> and <strong>dynamic</strong> admin dashboard</li>
+                        <li>Automatic <strong>CRUD generation</strong> for models, migrations, controllers,
+                            repositories, routes, and views</li>
+                        <li>Role-based access control (<strong>RBAC</strong>) with customizable roles and permissions
+                        </li>
+                        <li>Built-in <strong>API generation</strong> with dynamic Swagger documentation</li>
+                        <li>Support for <strong>multiple data types</strong> with customizable field options like
+                            unique, nullable, index, and default values</li>
+                        <li>Easy management of <strong>relationships</strong> between models (one-to-one, one-to-many,
+                            many-to-many)</li>
+                        <li>Customizable <strong>form validation</strong> for create, edit, and list views</li>
+                        <li>Fully integrated <strong>multi-language support</strong> for global applications</li>
+                        <li>Dynamic <strong>menu and sidebar generation</strong> based on CRUD operations</li>
+                        <li>Intuitive interface for managing <strong>user roles, permissions, and access
+                                control</strong></li>
+                        <li>Dynamic <strong>migration creation</strong> with foreign key support</li>
+                        <li>Integrated <strong>authentication</strong> system with login, registration, and password
+                            reset</li>
+                        <li>Supports both <strong>API-first</strong> and <strong>traditional CRUD</strong> development
+                        </li>
+                        <li>Built-in <strong>search, filter, and pagination</strong> for data lists</li>
+                        <li>Export and import data functionality (CSV, Excel, etc.)</li>
+                        <li>Automatic generation of <strong>frontend forms</strong> and validation</li>
+                        <li>Customizable and clean <strong>code structure</strong> following Laravel best practices</li>
+                        <li>Seamless integration with third-party packages and APIs</li>
+                        <li>Comprehensive <strong>documentation</strong> for easy setup and customization</li>
+                        <li>Active support and regular updates</li>
+                        <li>Generate <strong>controller, service, repository, model, migration, JavaScript, request, and
+                                Blade templates</strong> with a single Artisan command, reducing <strong>80% of CRUD
+                                work</strong> by automating create, edit, and index views based on a single field (e.g.,
+                            <code>name</code>).
+                        </li>
+                        <li>Customize and extend CRUD operations easily, allowing developers to focus on specific
+                            business logic instead of repetitive tasks.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="file-stricture" class="second-title">folder structure</h4>
+                    <ul class="folder">
+                        <li>
+                            'Source File' is bundled with folders:
+                            <ul>
+                                <li>Main Files</li>
+                                <li>Documentation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="system-requirements" class="second-title">System Requirements</h4>
+                    <p>The application has a few system requirements, so you will need to make sure your server meets
+                        the following requirements:</p>
+
+                    <ul class="right">
+                        <li>Laravel >= 11.9</li>
+                        <li>PHP >= 8.2 (Recommended: PHP 8.3.9)</li>
+                        <li>MySQL >= 8.3 or MariaDB equivalent</li>
+                        <li>Intl PHP Extension</li>
+                        <li>OpenSSL PHP Extension</li>
+                        <li>PDO PHP Extension</li>
+                        <li>PDO Drivers: MySQL, SQLite, PostgreSQL, SQL Server</li>
+                        <li>Mbstring PHP Extension</li>
+                        <li>Tokenizer PHP Extension</li>
+                        <li>BCMath PHP Extension</li>
+                        <li>XML PHP Extension</li>
+                        <li>Ctype PHP Extension</li>
+                        <li>JSON PHP Extension</li>
+                        <li>cURL PHP Extension</li>
+                        <li>Fileinfo PHP Extension</li>
+                        <li>GD PHP Extension</li>
+                        <li>Zip PHP Extension</li>
+                        <li>SOAP PHP Extension</li>
+                        <li>POSIX PHP Extension</li>
+                        <li>Tidy PHP Extension</li>
+                    </ul>
+
+                    <p>PHP INI Requirements:</p>
+                    <ul class="right">
+                        <li>allow_url_fopen = On</li>
+                        <li>memory_limit = 128M (or higher)</li>
+                        <li>max_execution_time = 60 (or higher)</li>
+                        <li>upload_max_filesize = 10M (or higher)</li>
+                        <li>post_max_size = 12M (or higher)</li>
+                    </ul>
+
+                    <p>Server Requirements:</p>
+                    <ul class="right">
+                        <li>Terminal Access (SSH)</li>
+                        <li>Apache, Nginx, or Caddy Server</li>
+                        <li>Enabled Cookies</li>
+                        <li>Enabled PHP Sessions</li>
+                        <li>Composer >= 2.7.7</li>
+                        <li>Node.js (for development) >= 20.11.1</li>
+                    </ul>
+                </section>
+
+                <div class="mb-40 pb-40 border-bottom">
+                    <h3 id="how-to-install" class="first-title">How to install</h3>
+                </div>
+
+                <section>
+                    <h4 id="live-server" class="second-title">Installation Steps</h4>
+                    <p>
+                        After purchasing <code>CRUD Builder</code>, download the zip file. Extract it to get
+                        <code>main.zip</code>. Upload <code>main.zip</code> to your server and extract it.
+                    </p>
+                    <p>
+                        <strong>Follow the instructions below:</strong>
+                    </p>
+                    <ul class="right">
+                        <li><b>If you upload it in <code>public_html</code> folder, visit
+                                <code>your_domain_name.com</code> in your browser.</b></li>
+                        <li><b>If you upload it in a subfolder inside <code>public_html</code>, visit
+                                <code>your_domain_name.com/folder_name</code>.</b></li>
+                        <li><b>Create a new <code>database</code> for the application.</b></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="server-installation" class="second-title">Server Installation</h4>
+                    <p>
+                        If you are installing on a server, follow the steps below to ensure proper server setup.
+                    </p>
+                    <ul class="right">
+                        <li><b>Upload the extracted <code>main.zip</code> to your server via FTP or SSH.</b></li>
+                        <li><b>Ensure your server meets the following requirements:</b>
+                            <ul class="right">
+                                <li>PHP version 8.2 or higher</li>
+                                <li>MySQL 8.3 or higher (or compatible database)</li>
+                                <li>Composer installed</li>
+                                <li>Apache or Nginx web server</li>
+                            </ul>
+                        </li>
+                        <li><b>Visit <code>your_domain_name.com</code> in your browser to start the installation
+                                wizard.</b></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="local-project-run" class="second-title">Local Project Run</h4>
+                    <p>
+                        If you are running the project locally, follow these steps to set up the environment.
+                    </p>
+                    <ul class="right">
+                        <li><b>Clone the project or extract the <code>main.zip</code> file to your local machine.</b>
+                        </li>
+                        <li><b>Navigate to the project directory and run the following commands:</b>
+                            <ul class="right">
+                                <li><code>composer install</code> - To install all PHP dependencies.</li>
+                                <li><code>npm install</code> - To install JavaScript dependencies.</li>
+                                <li><code>php artisan key:generate</code> - To generate the application key.</li>
+                                <li><code>php artisan migrate</code> - To migrate the database schema.</li>
+                                <li><code>php artisan serve</code> - To run the development server.</li>
+                            </ul>
+                        </li>
+                        <li><b>After running the commands, visit <code>http://localhost:8000</code> in your browser to
+                                access the application.</b></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul class="right">
+                        <li>After visiting the website URL, you will see the welcome page of the <strong>CRUD Builder
+                                Installer</strong>.</li>
+                        <li>Folder permissions will be checked. Ensure all required folders have right permission:
+                            <ul class="right">
+                                <li>Set the permission of the <strong>/app</strong> folder to <code>777</code>.</li>
+                                <li>Set the permission of the <strong>/routes</strong> folder to <code>777</code>.</li>
+                                <li>Set the permission of the <strong>/resources</strong> folder to <code>777</code>.
+                                </li>
+                                <li>Set the permission of the <strong>/public</strong> folder to <code>777</code>.</li>
+                                <li>Set the permission of the <strong>/storage</strong> folder to <code>777</code>.</li>
+                                <li>Set the permission of the <strong>/storage/framework</strong> folder to
+                                    <code>777</code>.
+                                </li>
+                                <li>Set the permission of the <strong>/storage/logs</strong> folder to <code>777</code>.
+                                </li>
+                                <li>Set the permission of the <strong>/bootstrap/cache</strong> folder to
+                                    <code>777</code>.
+                                </li>
+                                <li>Set the permission of the <strong>.env</strong> file to <code>777</code>.</li>
+                                <li>Set the permission of the <strong>/config</strong> folder to <code>777</code> (if
+                                    needed for certain configurations).</li>
+                                <li>Set the permission of the <strong>/database</strong> folder to <code>777</code> (if
+                                    the application writes to the database directory).</li>
+                            </ul>
+                        </li>
+                        <li>Set in the database configuration in env:
+                            <ul class="right">
+                                <li><code>Database Host</code></li>
+                                <li><code>Database User</code></li>
+                                <li><code>Database Name</code></li>
+                                <li><code>Database Password</code></li>
+                            </ul>
+                        </li>
+                        <li>If you need to configure a mail server, fill in the <code>SMTP</code> settings.</li>
+                        <li>If all fields are correctly filled and credentials are valid, you will be redirected to the
+                            application's dashboard.</li>
+                    </ul>
+                </section>
+
+
+
+                <section>
+                    <h4 id="credentials" class="second-title">Credentials for Demo</h4>
+
+                    <ul class="right">
+                        <li>
+                            For admin: email <code>admin@admin.com</code>, password <code>123456</code>.
+                        </li>
+
+                    </ul>
+                </section>
+
+
+                <div class="mb-40 pb-40 border-bottom">
+                    <h3 id="admin-panel" class="first-title">Admin Panel</h3>
+                </div>
+
+                <section>
+                    <h4 id="dashboard" class="second-title">Admin Dashboard</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can view key statistics for your platform:</li>
+                        <li>Here, you can monitor the total number of <strong>Users</strong>, <strong>Roles</strong>,
+                            <strong>Permissions</strong>, and <strong>Permission Groups</strong>.
+                        </li>
+                        <li>Each of these statistics helps you manage access and control within the platform:</li>
+                        <ul>
+                            <li><strong>User Count</strong>: Displays the total number of registered users.</li>
+                            <li><strong>Role Count</strong>: Shows the number of different roles assigned to users.</li>
+                            <li><strong>Permission Count</strong>: Provides a count of the permissions defined in the
+                                system.</li>
+                            <li><strong>Permission Group Count</strong>: Shows the total number of permission groups
+                                available for assigning permissions to users.</li>
+                        </ul>
+                        <br>
+                        <img src="images/admin/dashboard-stats.png" alt="Dashboard Statistics"
+                            class="img-responsive mw-mh-580-560">
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="user-management" class="second-title">User Management</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage user information including basic details such as name,
+                            email, password, and role.</li>
+                        <li>All users can be listed with their corresponding details and roles. You can view, edit, or
+                            delete users as needed.</li>
+
+                        <h5>User List</h5>
+                        <p>The list below shows all users along with their details:</p>
+
+                        <img src="images/admin/user-list.png" alt="User List" class="img-responsive mw-mh-580-560">
+
+                        <p>You can also export the user list in various formats:</p>
+                        <ul>
+                            <li><strong>Export to CSV</strong>: Download the user list as a CSV file for easy use in
+                                spreadsheet applications.</li>
+                            <li><strong>Export to Excel</strong>: Export the user list directly to an Excel file.</li>
+                            <li><strong>Print</strong>: Print the user list directly from the platform for physical
+                                records.</li>
+                        </ul>
+
+                        <br><br>
+                        <h5>Create User Information</h5>
+                        <p>To create a new user, click on the <strong>Create User</strong> button in the user management
+                            section. A form will appear where you can enter the following details for the new user:</p>
+
+                        <ul>
+                            <li><strong>Name</strong>: Enter the user's full name.</li>
+                            <li><strong>Email</strong>: Provide the user's email address, which will be used for login
+                                and notifications.</li>
+                            <li><strong>Password</strong>: Set a secure password for the user (you can generate one or
+                                create a custom one).</li>
+                            <li><strong>User Type</strong>: Choose the type of user—either an Admin with full access or
+                                a regular User with restricted access.</li>
+                            <li><strong>Role</strong>: Assign a specific role to the user, such as Super Admin, Editor,
+                                or Viewer. This will define their permissions within the system.</li>
+                        </ul>
+
+                        <p>Once all necessary details are filled in, click the <strong>Create User</strong> button to
+                            save the new user's information and grant them access to the platform.</p>
+
+                        <img src="images/admin/create-user.png" alt="Create User" class="img-responsive mw-mh-580-560">
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="role-management" class="second-title">Role Management</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage user roles within the platform.</li>
+                        <li>Roles define the permissions and access levels users have in the system.</li>
+
+                        <h5>Role List</h5>
+                        <p>The list below shows all the available roles within the platform:</p>
+
+                        <img src="images/admin/role-list.png" alt="Role List" class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Create Role Information</h5>
+                        <p>To create a new role, click on the <strong>Create Role</strong> button in the role management
+                            section. A form will appear where you can enter the following details for the new role:</p>
+
+                        <ul>
+                            <li><strong>Role Name</strong>: Enter a unique name for the role, such as
+                                <code>Admin</code>, <code>Editor</code>, or <code>Viewer</code>.
+                            </li>
+                        </ul>
+
+                        <p>Once the role name is entered, click the <strong>Create Role</strong> button to save the new
+                            role and assign it to users.</p>
+
+                        <img src="images/admin/create-role.png" alt="Create Role" class="img-responsive mw-mh-580-560">
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="permission-group-management" class="second-title">Permission Group Management</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage permission groups within the platform.</li>
+                        <li>Permission groups are used to organize multiple permissions that can be assigned to users or
+                            roles in the system.</li>
+
+                        <h5>Permission Group List</h5>
+                        <p>The list below shows all the available permission groups within the platform:</p>
+
+                        <img src="images/admin/permission-group-list.png" alt="Permission Group List"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Create Permission Group Information</h5>
+                        <p>To create a new permission group, click on the <strong>Create Permission Group</strong>
+                            button in the permission group management section. A form will appear where you can enter
+                            the following details for the new permission group:</p>
+
+                        <ul>
+                            <li><strong>Permission Group Name</strong>: Enter a unique name for the permission group,
+                                such as <code>User Permissions</code>, <code>Role Permissions</code>, or
+                                <code>Moduel wise Permissions</code>.
+                            </li>
+                            <li><strong>Permissions</strong>: Multiple permissions to associate with the permission
+                                group. Each permission defines an action a user or role can perform, such as
+                                <code>Create</code>, <code>Read</code>, <code>Update</code>, or <code>Delete</code>.
+                            </li>
+                        </ul>
+
+                        <p>Once the permission group name and associated permissions, click the <strong>Create
+                                Permission Group</strong> button to save the new permission group.</p>
+
+                        <img src="images/admin/create-permission-group.png" alt="Create Permission Group"
+                            class="img-responsive mw-mh-580-560">
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="permission-management" class="second-title">Permission Management</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage permissions within the platform.</li>
+                        <li>Permissions define specific actions or access rights, such as <code>Create</code>,
+                            <code>Read</code>, <code>Update</code>, or <code>Delete</code>, that can be assigned to
+                            users or roles through permission groups.
+                        </li>
+
+                        <h5>Permission List</h5>
+                        <p>The list below shows all the available permissions within the platform, along with the
+                            associated permission groups:</p>
+
+                        <img src="images/admin/permission-list.png" alt="Permission List"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Create Permission Information</h5>
+                        <p>To create a new permission, click on the <strong>Create Permission</strong> button in the
+                            permission management section. A form will appear where you can enter the following details
+                            for the new permission:</p>
+
+                        <ul>
+                            <li><strong>Permission Name</strong>: Enter a unique name for the permission, such as
+                                <code>View Dashboard</code>, <code>Edit Users</code>, or <code>Delete Orders</code>.
+                            </li>
+                            <li><strong>Permission Group</strong>: Select an existing permission group to associate with
+                                this permission. For example, you might select a group like
+                                <code>Admin Permissions</code> or <code>Editor Permissions</code>.
+                            </li>
+                            <li><strong>Permissions</strong>: Check the specific permissions that should be associated
+                                with this group, such as <code>Create</code>, <code>Read</code>, <code>Update</code>, or
+                                <code>Delete</code>.
+                            </li>
+                        </ul>
+
+                        <p>Once the permission name, group, and associated actions are selected, click the
+                            <strong>Create Permission</strong> button to save the new permission and associate it with
+                            the chosen group.
+                        </p>
+
+                        <img src="images/admin/create-permission.png" alt="Create Permission"
+                            class="img-responsive mw-mh-580-560">
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="role-has-permission" class="second-title">Role Has Permission</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage the association of permissions to roles.</li>
+                        <li>Roles can have multiple permissions, which determine the specific actions a role can perform
+                            within the system.</li>
+
+                        <h5>Role List with Associated Permissions</h5>
+                        <p>The list below shows all roles along with the permissions they have been assigned:</p>
+
+                        <img src="images/admin/role-permission-list.png" alt="Role Permission List"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Permissions Modal</h5>
+                        <p>When you click on a role, a modal will appear showing all permissions associated with that
+                            role. The modal allows you to select individual permissions or select permissions by group:
+                        </p>
+
+                        <img src="images/admin/permission-modal.png" alt="Permissions Modal"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Create Role Has Permission</h5>
+                        <p>To create a role with permissions, click on the <strong>Create Role</strong> button. A form
+                            will appear where you can select the role and associate permissions:</p>
+
+                        <ul>
+                            <li>Select the role you want to assign permissions to.</li>
+                            <li>A modal will appear with a list of all available permissions. You can check permissions
+                                individually or select them by permission group.</li>
+                            <li>Once you've selected the desired permissions, click the <strong>Save Role
+                                    Permissions</strong> button to save the association.</li>
+                        </ul>
+
+                        <img src="images/admin/create-role-permission.png" alt="Create Role Permissions"
+                            class="img-responsive mw-mh-580-560">
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="language-localization" class="second-title">Language and Localization</h4>
+
+                    <ul class="right">
+                        <li>In this section, you can manage the language settings and localization data for the
+                            platform.</li>
+                        <li>Each country can have its specific localization data, such as language, date formats, and
+                            currency. If localization data is not provided, English will be used as the default.</li>
+
+                        <h5>Country List with Country Code</h5>
+                        <p>The list below shows all the available countries along with their respective country codes:
+                        </p>
+
+                        <img src="images/admin/country-list.png" alt="Country List"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Create Country and Localization</h5>
+                        <p>To create a new country and its localization settings, click on the <strong>Create
+                                Country</strong> button. A form will appear where you can input the following details:
+                        </p>
+
+                        <ul>
+                            <li><strong>Country</strong>: Enter the name of the country, such as
+                                <code>United States</code>, <code>Franch</code>, etc.
+                            </li>
+                            <li><strong>Country Code</strong>: Input the country code (e.g., <code>en</code>,
+                                <code>fr</code>).
+                            </li>
+                            <li><strong>Localization Data</strong>: You can enter specific localization settings for the
+                                country, such as language, date format, and currency. If no localization data is
+                                provided, the system will default to English.</li>
+                        </ul>
+
+                        <p>Once the country and localization data are entered, click the <strong>Create Country</strong>
+                            button to save the new country and its localization settings. If you wish to edit the
+                            country or localization data later, you can easily update it from the user management
+                            section.</p>
+
+                        <img src="images/admin/create-country-localization.png" alt="Create Country and Localization"
+                            class="img-responsive mw-mh-580-560">
+
+                        <br><br>
+                        <h5>Change Language and Localization Data</h5>
+                        <p>After creating a user, you can change the language and localization data as needed:</p>
+
+                        <ul>
+                            <li><strong>Automatic Localization</strong>: When a user inputs localization data (such as
+                                language and country code), the system will automatically switch to the localized data.
+                                If no data is provided, it will default to English.</li>
+                            <li><strong>Manual Changes</strong>: You can manually update the localization data for any
+                                user after creation, allowing the user to change language settings or country code at
+                                any time.</li>
+                        </ul>
+
+                        <img src="images/admin/change-localization.png" alt="Change Localization Data"
+                            class="img-responsive mw-mh-580-560">
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 id="curd-action" class="second-title">CRUD Module Documentation - Create Action</h4>
+
+                    <p>In this section, we will describe the Create action of the CRUD (Create, Read, Update, Delete)
+                        module. The Create functionality allows you to add new records to the system. Below are the key
+                        components involved in setting up the Create functionality with screenshots of each part.</p>
+
+                    <div class="mb-3">
+                        <h5>1. Model Configuration</h5>
+                        <p>The Model defines the structure and logic for interacting with a specific database table. For
+                            the
+                            Create functionality, the model ensures that the necessary fields are properly filled when
+                            adding new records.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: The model configuration includes specifying which fields
+                                can
+                                be mass-assigned (fillable) and defining any relationships between models and soft
+                                Deletes.
+                            </li>
+
+                        </ul>
+
+                        <img src="images/admin/model-config.png" alt="Model Config"
+                            class="img-responsive mw-mh-580-560">
+                    </div>
+                    <div class="mb-3">
+                        <h5>2. Migration Configuration</h5>
+                        <p>The Migration is a blueprint for creating the database table that will store the records. For
+                            the
+                            Create action, migrations define the table structure, including the fields that need to be
+                            captured when adding a new record.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: The migration file is responsible for creating the
+                                necessary
+                                database columns, such as name, email, and created_at. Each migration file corresponds
+                                to a
+                                version of the database schema.</li>
+                        </ul>
+
+                        <img src="images/admin/migration-config.png" alt="Migration Config"
+                            class="img-responsive mw-mh-580-560">
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>3. Model Relationship</h5>
+                        <p>Model relationships define how models are connected to each other. When creating a new
+                            record,
+                            some fields may reference other tables (for example, foreign keys), and these relationships
+                            should be specified in the model.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: Relationships like belongsTo, hasMany, or hasOne help to
+                                link
+                                models together, especially when foreign keys are involved. For example, a Post model
+                                might
+                                have a belongsTo relationship with a Category model.</li>
+                        </ul>
+
+                        <img src="images/admin/model-relation.png" alt="Model relation"
+                            class="img-responsive mw-mh-580-560">
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>4. View Configuration</h5>
+                        <p>The View is the front-end interface where users can input data. It contains the HTML form
+                            that
+                            allows users to create new records. This view is rendered when the "Create" button is
+                            clicked.
+                        </p>
+
+                        <ul>
+                            <li><strong>Description</strong>: The view configuration includes form fields for data
+                                entry.
+                                This is where the user interacts with the system to input details such as name, email,
+                                and
+                                any other required fields.</li>
+                        </ul>
+
+                        <img src="images/admin/view-config-for-curd.png" alt="Model Config"
+                            class="img-responsive mw-mh-580-560">
+
+                    </div>
+                    <div class="mb-3">
+                        <h5>5. API Field Configuration (Validation)</h5>
+                        <p>The API allows external applications to interact with the system. The API field validation
+                            ensures that the incoming data in the POST request is valid before it is processed and saved
+                            to
+                            the database.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: When users send POST requests to the API to create a new
+                                record, the fields they provide must be validated and processed. The API field
+                                configuration
+                                ensures the correct fields are included and validated.</li>
+                        </ul>
+
+                        <img src="images/admin/api-field.png" alt="Validation" class="img-responsive mw-mh-580-560">
+                    </div>
+                    <div class="mb-3">
+                        <h5>6. Model Selection for Foreign ID Selection</h5>
+                        <p>In some cases, a record needs to reference another record via a foreign key. Foreign ID
+                            selection
+                            allows you to choose the related model for fields like user_id, category_id, etc.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: When creating a new record, the foreign key fields must be
+                                populated with the correct related model data. The system uses dropdowns or search
+                                fields to
+                                select related entities.</li>
+                        </ul>
+
+                        <img src="images/admin/foreignId.png" alt="Validation" class="img-responsive mw-mh-580-560">
+
+                        <h5>7. Validation Configuration</h5>
+                        <p>Validation ensures that the data entered by the user is correct before the new record is
+                            saved to
+                            the database. This step is critical for data integrity and user experience.</p>
+
+                        <ul>
+                            <li><strong>Description</strong>: Validation rules are applied to the form fields to ensure
+                                they
+                                meet the required format (e.g., email format, required fields, etc.). This step prevents
+                                invalid data from being entered into the system.</li>
+                        </ul>
+
+                        <img src="images/admin/validation.png" alt="Validation" class="img-responsive mw-mh-580-560">
+                    </div>
+                </section>
+
+
+
+
+
+
+
+                <div class="mb-40 pb-40">
+                    <h3 id="release-log" class="first-title">Thank You</h3>
+                    <p>
+                        Again, thank you for purchasing RockNovaLabs. If you need any help or support, please use email
+                        or
+                        contact form via Codecanyon <a href="https://codecanyon.net/user/rocknovalabs"
+                            target="_blank">Profile site</a> <br>
+                        Hope you are happy with RockNovaLabs, all the best with your business.
+                    </p>
+
+                    <h3 class="second-title">Release Log</h3>
+                    <div class="code-block">
+                        Version 1.0 (29th December 2024)
+                    </div>
+
+                    <p>
+                        &copy;
+                        <script>var d = new Date(); document.write(d.getFullYear());</script> <a href="#">
+                            RockNovaLabs</a>
+                    </p>
+                </div>
+
+            </div>
+        </aside>
+    </main>
+
+    <script src="assets/js/jquery.2.2.4.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
