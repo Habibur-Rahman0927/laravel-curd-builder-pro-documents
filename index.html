@@ -836,11 +836,102 @@
                 </section>
 
 
-
-
-
-
-
+                <section>
+                    <h4 id="api-authentication" class="second-title">API User Authentication</h4>
+                
+                    <ul class="right">
+                        <li>This section outlines the key API endpoints used for user authentication and account management:</li>
+                
+                        <ul>
+                            <li><strong>User Registration</strong>:  
+                                <ul>
+                                    <li>Allows new users to register an account.</li>
+                                    <li><code>POST /api/register</code></li>
+                                    <li>Required fields:  
+                                        <ul>
+                                            <li><code>name</code> (string)</li>
+                                            <li><code>email</code> (string, unique)</li>
+                                            <li><code>password</code> (string)</li>
+                                            <li><code>password_confirmation</code> (string)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li><strong>User Login</strong>:  
+                                <ul>
+                                    <li>Authenticates the user and returns a JWT token for further API access.</li>
+                                    <li><code>POST /api/login</code></li>
+                                    <li>Required fields:  
+                                        <ul>
+                                            <li><code>email</code> (string)</li>
+                                            <li><code>password</code> (string)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Response includes:  
+                                        <ul>
+                                            <li><code>access_token</code>: Token for authenticated API requests.</li>
+                                            <li><code>token_type</code>: Typically "Bearer".</li>
+                                            <li><code>expires_in</code>: Token expiration time.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li><strong>Forgot Password</strong>:  
+                                <ul>
+                                    <li>Generates a reset token and sends it to the user's email.</li>
+                                    <li><code>POST /api/password/forgot</code></li>
+                                    <li>Required field:  
+                                        <ul>
+                                            <li><code>email</code> (string)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li><strong>Reset Password</strong>:  
+                                <ul>
+                                    <li>Resets the user's password using the provided token.</li>
+                                    <li><code>POST /api/password/reset</code></li>
+                                    <li>Required fields:  
+                                        <ul>
+                                            <li><code>token</code> (string, sent via email)</li>
+                                            <li><code>email</code> (string)</li>
+                                            <li><code>password</code> (string)</li>
+                                            <li><code>password_confirmation</code> (string)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                
+                            <li><strong>Logout</strong>:  
+                                <ul>
+                                    <li>Logs out the user and invalidates the token.</li>
+                                    <li><code>POST /api/logout</code></li>
+                                    <li>Header:  
+                                        <ul>
+                                            <li><code>Authorization</code>: Bearer <em>{token}</em></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                
+                        <li><strong>Swagger Documentation</strong>:  
+                            <ul>
+                                <li>All API endpoints are automatically documented using Swagger.</li>
+                                <li>Visit <code>/api/documentation</code> to view the interactive Swagger UI.</li>
+                                <li>Swagger provides real-time testing and detailed information about request parameters, responses, and authentication methods.</li>
+                            </ul>
+                        </li>
+                
+                        <br>
+                        <img src="images/api/authentication-swagger.png" alt="API Authentication Swagger Documentation"
+                             class="img-responsive mw-mh-580-560">
+                    </ul>
+                </section>
+                
                 <div class="mb-40 pb-40">
                     <h3 id="release-log" class="first-title">Thank You</h3>
                     <p>
